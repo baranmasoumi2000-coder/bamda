@@ -134,7 +134,7 @@ export default function ContactPage() {
 
         <div className="mt-16 border-t border-white/15 pt-8">
           <p className="text-[10px] tracking-[0.3em] text-zinc-500">
-            WORKSHOP LOCATION / آدرس کارگاه
+            WORKSHOP LOCATION / آدرس کارگاه و دفتر
           </p>
 
           <p className="mt-5 text-base font-light leading-8 text-zinc-100 sm:text-lg">
