@@ -1,7 +1,13 @@
 
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useSearchParams } from "next/navigation";
 
 type Project = {
@@ -118,7 +124,7 @@ const projects: Project[] = [
   },
 ];
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const requestedProject = searchParams.get("project");
 
@@ -160,7 +166,6 @@ export default function ProjectsPage() {
     setActiveSection((current) => Math.max(current - 1, 0));
   }, []);
 
-  // Open the selected project directly from the URL.
   useEffect(() => {
     if (!requestedProject) {
       setActiveProject(null);
@@ -214,7 +219,9 @@ export default function ProjectsPage() {
     previousSection,
   ]);
 
-  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+  const handleWheel = (
+    event: React.WheelEvent<HTMLDivElement>
+  ) => {
     if (wheelLock.current) return;
 
     const delta =
@@ -386,7 +393,6 @@ export default function ProjectsPage() {
               transform: `translateX(-${activeSection * 100}vw)`,
             }}
           >
-            {/* PROJECT COVER */}
             <section className="relative h-full w-screen flex-none overflow-hidden bg-[#292B29] text-white">
               <img
                 src={project.image}
@@ -419,7 +425,6 @@ export default function ProjectsPage() {
               </button>
             </section>
 
-            {/* PROJECT DETAILS */}
             {project.sections.map((section, index) => (
               <section
                 key={section.eyebrow}
@@ -454,7 +459,6 @@ export default function ProjectsPage() {
             ))}
           </div>
 
-          {/* NAVIGATION */}
           <footer className="absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between gap-2 border-t border-[#292B29]/10 bg-[#E7E3DA]/95 px-4 py-4 backdrop-blur-sm sm:px-10">
             <button
               type="button"
@@ -472,7 +476,9 @@ export default function ProjectsPage() {
                   type="button"
                   onClick={() => setActiveSection(index)}
                   aria-label={`Go to section ${index + 1}`}
-                  aria-current={activeSection === index ? "step" : undefined}
+                  aria-current={
+                    activeSection === index ? "step" : undefined
+                  }
                   className={`h-1 transition-all duration-300 ${
                     activeSection === index
                       ? "w-6 bg-[#E74727] sm:w-8"
@@ -494,5 +500,21 @@ export default function ProjectsPage() {
         </div>
       )}
     </main>
+  );
+}
+
+export default function ProjectsPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-[#E7E3DA] px-6 pt-32 text-[#292B29]">
+          <p className="text-sm tracking-widest">
+            BAMDA / PROJECTS
+          </p>
+        </main>
+      }
+    >
+      <ProjectsContent />
+    </Suspense>
   );
 }
