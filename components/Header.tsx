@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLink =
-  "whitespace-nowrap text-[12px] font-light tracking-[0.14em] transition-colors duration-300 hover:text-[#E74727] xl:text-[13px] xl:tracking-[0.16em]";
+  "whitespace-nowrap text-[12px] font-light tracking-[0.14em] text-white transition-colors duration-300 hover:text-[#E74727] xl:text-[13px] xl:tracking-[0.16em]";
 
 const persianLabel =
-  "mt-1 block text-[10px] tracking-normal text-zinc-400";
+  "mt-1 block text-[10px] tracking-normal text-white/70";
 
 const dropdownItem =
-  "block px-4 py-3 text-[12px] tracking-[0.10em] transition-colors duration-200 hover:bg-white/5 hover:text-[#E74727]";
+  "block px-4 py-3 text-[12px] tracking-[0.10em] text-zinc-200 transition-colors duration-200 hover:bg-white/5 hover:text-[#E74727]";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,8 +24,8 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-[100] m-0 w-full border-0 bg-[#292B29] p-0 text-zinc-200 shadow-none outline-none">
-      <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-5 border-0 px-4 sm:px-8 lg:px-12">
+    <header className="fixed inset-x-0 top-0 z-[100] m-0 w-full border-0 bg-transparent p-0 text-white shadow-none outline-none">
+      <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-5 px-4 sm:px-8 lg:px-12">
         <Link
           href="/"
           onClick={closeMenus}
@@ -59,13 +59,13 @@ export default function Header() {
               aria-label="More navigation options"
               aria-expanded={moreOpen}
               onClick={() => setMoreOpen((open) => !open)}
-              className="flex h-11 w-10 items-center justify-center text-xl tracking-[0.12em] text-zinc-300 transition-colors hover:text-[#E74727]"
+              className="flex h-10 w-10 items-center justify-center border-0 bg-transparent p-0 text-lg tracking-[0.12em] text-white/90 shadow-none outline-none transition-colors hover:text-[#E74727]"
             >
               •••
             </button>
 
             <div
-              className={`absolute right-0 top-[calc(100%-4px)] w-64 border-0 bg-[#292B29] p-2 shadow-none outline-none transition-all duration-200 ${
+              className={`absolute right-0 top-[calc(100%-4px)] w-64 border-0 bg-[#292B29] p-2 shadow-lg outline-none transition-all duration-200 ${
                 moreOpen
                   ? "visible translate-y-0 opacity-100"
                   : "invisible translate-y-2 opacity-0"
@@ -130,20 +130,20 @@ export default function Header() {
           onClick={() => setMobileOpen((open) => !open)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
-          className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-[5px] border-0 bg-transparent p-0 shadow-none outline-none lg:hidden"
         >
           <span
-            className={`h-px w-6 bg-white transition-transform ${
-              mobileOpen ? "translate-y-[4px] rotate-45" : ""
+            className={`block h-px w-[18px] bg-white transition-transform duration-200 ${
+              mobileOpen ? "translate-y-[6px] rotate-45" : ""
             }`}
           />
           <span
-            className={`h-px w-6 bg-white transition-opacity ${
+            className={`block h-px w-[18px] bg-white transition-opacity duration-200 ${
               mobileOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-px w-6 bg-white transition-transform ${
+            className={`block h-px w-[18px] bg-white transition-transform duration-200 ${
               mobileOpen ? "-translate-y-[6px] -rotate-45" : ""
             }`}
           />
@@ -152,11 +152,11 @@ export default function Header() {
 
       {/* MOBILE NAVIGATION */}
       {mobileOpen && (
-        <nav className="max-h-[calc(100svh-76px)] overflow-y-auto border-0 bg-[#292B29] px-6 pb-7 pt-3 lg:hidden">
+        <nav className="max-h-[calc(100svh-76px)] overflow-y-auto border-0 bg-[#292B29] px-6 pb-7 pt-3 shadow-lg lg:hidden">
           <Link
             href="/projects"
             onClick={closeMenus}
-            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] text-white transition-colors hover:text-[#E74727]"
           >
             PROJECTS
             <span className={persianLabel}>پروژه‌ها</span>
@@ -166,12 +166,13 @@ export default function Header() {
             type="button"
             onClick={() => setMoreOpen((open) => !open)}
             aria-expanded={moreOpen}
-            className="flex w-full items-center justify-between py-4 text-left text-[13px] tracking-[0.14em] hover:text-[#E74727]"
+            className="flex w-full items-center justify-between border-0 bg-transparent py-4 text-left text-[13px] tracking-[0.14em] text-white shadow-none outline-none transition-colors hover:text-[#E74727]"
           >
             <span>
               MORE <span className="ml-2">•••</span>
               <span className={persianLabel}>بخش‌های بیشتر</span>
             </span>
+
             <span className="text-lg text-[#E74727]">
               {moreOpen ? "−" : "+"}
             </span>
@@ -220,7 +221,7 @@ export default function Header() {
           <Link
             href="/about"
             onClick={closeMenus}
-            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] text-white transition-colors hover:text-[#E74727]"
           >
             ABOUT
             <span className={persianLabel}>درباره ما</span>
@@ -229,7 +230,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={closeMenus}
-            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] text-white transition-colors hover:text-[#E74727]"
           >
             CONTACT
             <span className={persianLabel}>تماس با ما</span>
