@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLink =
-  "whitespace-nowrap text-[10px] font-light tracking-[0.14em] transition-colors duration-300 hover:text-[#E74727] sm:text-[11px] sm:tracking-[0.18em]";
+  "whitespace-nowrap text-[12px] font-light tracking-[0.14em] transition-colors duration-300 hover:text-[#E74727] xl:text-[13px] xl:tracking-[0.16em]";
 
 const persianLabel =
-  "mt-1 block text-[9px] tracking-normal text-zinc-500";
+  "mt-1 block text-[10px] tracking-normal text-zinc-400";
 
 const dropdownItem =
-  "block px-4 py-3 text-[10px] tracking-[0.13em] transition-colors duration-200 hover:bg-white/5 hover:text-[#E74727]";
+  "block px-4 py-3 text-[12px] tracking-[0.10em] transition-colors duration-200 hover:bg-white/5 hover:text-[#E74727]";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,8 +24,8 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#292B29]/95 text-zinc-200 backdrop-blur-md">
-      <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-5 px-4 sm:px-8 lg:px-12">
+    <header className="fixed left-0 top-0 z-[100] m-0 w-full border-0 bg-[#292B29] p-0 text-zinc-200 shadow-none outline-none">
+      <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-5 border-0 px-4 sm:px-8 lg:px-12">
         <Link
           href="/"
           onClick={closeMenus}
@@ -65,7 +65,7 @@ export default function Header() {
             </button>
 
             <div
-              className={`absolute right-0 top-[calc(100%-4px)] w-64 border border-white/10 bg-[#292B29] p-2 shadow-2xl transition-all duration-200 ${
+              className={`absolute right-0 top-[calc(100%-4px)] w-64 border-0 bg-[#292B29] p-2 shadow-none outline-none transition-all duration-200 ${
                 moreOpen
                   ? "visible translate-y-0 opacity-100"
                   : "invisible translate-y-2 opacity-0"
@@ -152,11 +152,11 @@ export default function Header() {
 
       {/* MOBILE NAVIGATION */}
       {mobileOpen && (
-        <nav className="max-h-[calc(100svh-76px)] overflow-y-auto border-t border-white/10 bg-[#292B29] px-6 pb-7 pt-3 lg:hidden">
+        <nav className="max-h-[calc(100svh-76px)] overflow-y-auto border-0 bg-[#292B29] px-6 pb-7 pt-3 lg:hidden">
           <Link
             href="/projects"
             onClick={closeMenus}
-            className="block border-b border-white/10 py-4 text-[11px] tracking-[0.16em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
           >
             PROJECTS
             <span className={persianLabel}>پروژه‌ها</span>
@@ -166,7 +166,7 @@ export default function Header() {
             type="button"
             onClick={() => setMoreOpen((open) => !open)}
             aria-expanded={moreOpen}
-            className="flex w-full items-center justify-between border-b border-white/10 py-4 text-left text-[11px] tracking-[0.16em] hover:text-[#E74727]"
+            className="flex w-full items-center justify-between py-4 text-left text-[13px] tracking-[0.14em] hover:text-[#E74727]"
           >
             <span>
               MORE <span className="ml-2">•••</span>
@@ -178,7 +178,7 @@ export default function Header() {
           </button>
 
           {moreOpen && (
-            <div className="border-b border-white/10 py-2 pl-3">
+            <div className="py-2 pl-3">
               <Link
                 href="/architectural-library"
                 onClick={closeMenus}
@@ -220,7 +220,7 @@ export default function Header() {
           <Link
             href="/about"
             onClick={closeMenus}
-            className="block border-b border-white/10 py-4 text-[11px] tracking-[0.16em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
           >
             ABOUT
             <span className={persianLabel}>درباره ما</span>
@@ -229,7 +229,7 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={closeMenus}
-            className="block py-4 text-[11px] tracking-[0.16em] hover:text-[#E74727]"
+            className="block py-4 text-[13px] tracking-[0.14em] hover:text-[#E74727]"
           >
             CONTACT
             <span className={persianLabel}>تماس با ما</span>
