@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const base = "https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani";
-const toFa = (value: number) => String(value).replace(/\\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
+const toFa = (value: number) => String(value).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
 const gallery = Array.from({ length: 9 }, (_, index) => ({
   src: `${base}/${String(index + 1).padStart(2, "0")}.png`,
   alt: `اقامتگاه عباس‌خانی — نمای ${toFa(index + 1)}`,
@@ -62,7 +62,6 @@ export default function AbasKhaniResidence() {
 
   return (
     <main
-      dir="rtl"
       dir="ltr" className="fixed inset-0 overflow-hidden bg-black text-white"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
