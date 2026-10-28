@@ -63,7 +63,7 @@ export default function AbasKhaniResidence() {
   return (
     <main
       dir="rtl"
-      className="fixed inset-0 overflow-hidden bg-black text-white"
+      dir="ltr" className="fixed inset-0 overflow-hidden bg-black text-white"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -75,7 +75,7 @@ export default function AbasKhaniResidence() {
         <section className="relative h-full w-screen flex-none">
           <Image src={gallery[0].src} alt="اقامتگاه عباس‌خانی" fill priority sizes="100vw" className="object-cover" unoptimized />
           <div className="absolute inset-0 bg-black/45" />
-          <div className="absolute bottom-20 right-6 left-6 text-right sm:bottom-16 sm:right-14">
+          <div dir="rtl" className="absolute bottom-20 right-6 left-6 text-right sm:bottom-16 sm:right-14">
             <p className="mb-3 text-xs tracking-wide text-white/70">بامدا / پروژهٔ مسکونی</p>
             <h1 className="text-5xl font-extralight leading-tight sm:text-7xl">اقامتگاه عباس‌خانی</h1>
             <p className="mt-3 text-sm text-zinc-300">چیتگر، تهران / طراحی داخلی</p>
@@ -91,7 +91,7 @@ export default function AbasKhaniResidence() {
         </section>
 
         <section className="flex h-full w-screen flex-none items-center overflow-y-auto px-7 py-24 sm:px-16 lg:px-24">
-          <div className="max-w-4xl text-right">
+          <div dir="rtl" className="max-w-4xl text-right">
             <p className="mb-6 text-xs tracking-wide text-[#E74727]">پروژه / ۰۴</p>
             <h2 className="mb-8 text-3xl font-light sm:text-5xl">اقامتگاه عباس‌خانی</h2>
             <p className="text-sm leading-8 text-zinc-300 sm:text-base sm:leading-9">
