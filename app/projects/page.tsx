@@ -297,7 +297,14 @@ function ProjectsContent() {
             <article key={item.slug} className="w-full">
               <button
                 type="button"
-                onClick={() => openProject(index)}
+                onClick={() => {
+                  if (item.slug === "villa-rasht") {
+                    window.location.href = "/projects/villa-rasht";
+                    return;
+                  }
+
+                  openProject(index);
+                }}
                 className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E74727]"
                 aria-label={`Open ${item.title} project`}
               >
