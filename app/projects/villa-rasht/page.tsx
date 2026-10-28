@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -12,56 +13,38 @@ const gallery = [
   },
   {
     src: "/images/rasht render 02.png",
-    en: "Render 02",
-    fa: "رندر ۰۲",
+    en: "Exterior Render 02",
+    fa: "رندر خارجی ۰۲",
     type: "image",
   },
   {
     src: "/images/rasht render 03.png",
-    en: "Render 03",
-    fa: "رندر ۰۳",
+    en: "Exterior Render 03",
+    fa: "رندر خارجی ۰۳",
+    type: "image",
+  },
+  {
+    src: "/images/rasht dakheli 01.png",
+    en: "Interior Design 01",
+    fa: "طراحی داخلی ۰۱",
     type: "image",
   },
   {
     src: "/images/rasht dakheli 02.png",
-    en: "Interior Design",
-    fa: "طراحی داخلی",
-    type: "image",
-  },
-  {
-    src: "/images/rasht diagram 03.png",
-    en: "Design Development",
-    fa: "روند شکل‌گیری طرح",
-    type: "image",
-  },
-  {
-    src: "/images/rasht diagram 01.png",
-    en: "Concept Diagram",
-    fa: "دیاگرام مفهومی",
+    en: "Interior Design 02",
+    fa: "طراحی داخلی ۰۲",
     type: "image",
   },
   {
     src: "/images/rasht dakheli 03.png",
-    en: "Interior Atmosphere",
-    fa: "فضای داخلی",
+    en: "Interior Design 03",
+    fa: "طراحی داخلی ۰۳",
     type: "image",
-  },
-  {
-    src: "/images/rasht plan.pdf",
-    en: "Floor Plan",
-    fa: "پلان معماری",
-    type: "pdf",
   },
   {
     src: "/images/rasht deatail 01.jpg",
     en: "Architectural Detail 01",
     fa: "دیتیل معماری ۰۱",
-    type: "image",
-  },
-  {
-    src: "/images/rasht dakheli 01.png",
-    en: "Interior Design",
-    fa: "طراحی داخلی",
     type: "image",
   },
   {
@@ -71,16 +54,40 @@ const gallery = [
     type: "image",
   },
   {
-    src: "/images/rasht boresh.pdf",
-    en: "Building Section",
-    fa: "برش معماری",
-    type: "pdf",
-  },
-  {
     src: "/images/rasht deatail 03.jpg",
     en: "Architectural Detail 03",
     fa: "دیتیل معماری ۰۳",
     type: "image",
+  },
+  {
+    src: "/images/rasht diagram 01.png",
+    en: "Concept Diagram",
+    fa: "دیاگرام مفهومی",
+    type: "image",
+  },
+  {
+    src: "/images/rasht diagram 02.png",
+    en: "Design Diagram 02",
+    fa: "دیاگرام طراحی ۰۲",
+    type: "image",
+  },
+  {
+    src: "/images/rasht diagram 03.png",
+    en: "Design Development",
+    fa: "روند شکل‌گیری طرح",
+    type: "image",
+  },
+  {
+    src: "/images/rasht plan.pdf",
+    en: "Floor Plan",
+    fa: "پلان معماری",
+    type: "pdf",
+  },
+  {
+    src: "/images/rasht boresh.pdf",
+    en: "Building Section",
+    fa: "برش معماری",
+    type: "pdf",
   },
 ];
 
@@ -135,6 +142,7 @@ export default function VillaRasht() {
     isDragging.current = true;
     startX.current = event.clientX;
     startScroll.current = galleryRef.current?.scrollLeft ?? 0;
+
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
@@ -159,6 +167,7 @@ export default function VillaRasht() {
             <h1 className="text-3xl font-extralight tracking-wide md:text-5xl">
               Villa Rasht
             </h1>
+
             <p className="mt-3 text-xs tracking-[0.25em] text-zinc-400">
               RESIDENTIAL PROJECT / 2026
             </p>
@@ -168,15 +177,16 @@ export default function VillaRasht() {
             <button
               type="button"
               onClick={() => scrollGallery(-1)}
-              aria-label="Previous image"
+              aria-label="Previous slide"
               className="flex h-10 w-10 items-center justify-center border border-zinc-700 text-xl transition hover:bg-white hover:text-black"
             >
               ←
             </button>
+
             <button
               type="button"
               onClick={() => scrollGallery(1)}
-              aria-label="Next image"
+              aria-label="Next slide"
               className="flex h-10 w-10 items-center justify-center border border-zinc-700 text-xl transition hover:bg-white hover:text-black"
             >
               →
@@ -193,10 +203,6 @@ export default function VillaRasht() {
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
           onLostPointerCapture={handlePointerUp}
-          onKeyDown={(event) => {
-            if (event.key === "ArrowRight") scrollGallery(1);
-            if (event.key === "ArrowLeft") scrollGallery(-1);
-          }}
           className="flex snap-x snap-mandatory gap-0 overflow-x-auto overscroll-x-contain outline-none cursor-grab active:cursor-grabbing"
           style={{ scrollbarWidth: "none" }}
         >
@@ -219,7 +225,9 @@ export default function VillaRasht() {
                     rel="noreferrer"
                     draggable={false}
                     onClick={(event) => {
-                      if (isDragging.current) event.preventDefault();
+                      if (isDragging.current) {
+                        event.preventDefault();
+                      }
                     }}
                     className="flex h-full w-full items-center justify-center"
                   >
@@ -242,6 +250,7 @@ export default function VillaRasht() {
                   <h2 className="text-sm tracking-wide text-zinc-200 md:text-base">
                     {item.en}
                   </h2>
+
                   <p
                     dir="rtl"
                     className="mt-2 text-sm leading-7 text-zinc-400"
