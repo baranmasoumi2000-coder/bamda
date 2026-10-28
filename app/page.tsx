@@ -19,7 +19,7 @@ const projects = [
     location: "SHAHRAK-E GHARB, TEHRAN",
     image: "/images/yousefi/yousefi 01.png",
     description:
-      "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
+      "طراحی داخلی معاصر یک واحد مسکونی با تأکید بر مصالح آرام، نورپردازی گرم و آسایش روزمره.",
   },
 ];
 
