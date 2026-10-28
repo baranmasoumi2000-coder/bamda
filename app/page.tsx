@@ -35,7 +35,7 @@ const projects = [
     title: "Abas Khani Residence",
     category: "RESIDENTIAL INTERIOR",
     location: "IRAN",
-    image: "/images/abas khani/01.png",
+    image: "https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani/01.png",
     description:
       "طراحی داخلی معاصر با تأکید بر متریال، نور و کیفیت تجربه‌ی فضای مسکونی.",
   },
