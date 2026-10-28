@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = [
-  { src: "/images/yousefi/yousefi 01.png", en: "TV Room — View 01", fa: "تی‌وی‌روم — نمای ۰۱" },
   { src: "/images/yousefi/yousefi 02.png", en: "TV Room — View 02", fa: "تی‌وی‌روم — نمای ۰۲" },
   { src: "/images/yousefi/yousefi 03.png", en: "TV Room — View 03", fa: "تی‌وی‌روم — نمای ۰۳" },
   { src: "/images/yousefi/yousefi 04.png", en: "TV Room — View 04", fa: "تی‌وی‌روم — نمای ۰۴" },
