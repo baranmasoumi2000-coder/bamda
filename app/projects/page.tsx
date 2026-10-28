@@ -92,8 +92,6 @@ const projects: Project[] = [
       },
     ],
   },
-,
-
   {
     slug: "mohammadi",
     title: "Mohammadi Café",
