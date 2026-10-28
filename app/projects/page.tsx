@@ -122,7 +122,7 @@ const projects: Project[] = [
     category: "RESIDENTIAL INTERIOR",
     location: "IRAN",
     year: "2026",
-    image: "https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani/01.png",
+    image: "/images/abas-khani/01.png",
     description:
       "A contemporary residential project exploring materiality, light, and the atmosphere of everyday living.",
     sections: [
