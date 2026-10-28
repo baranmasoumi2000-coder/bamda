@@ -92,66 +92,7 @@ const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: "medatech",
-    title: "Medatech",
-    category: "MEDICAL OFFICE",
-    location: "TEHRAN, IRAN",
-    year: "",
-    image: "/images/medatech.png",
-    description:
-      "A considered workplace environment designed around its users and everyday needs.",
-    sections: [
-      {
-        eyebrow: "01 / THE PROJECT",
-        title: "A Space for Work and Care",
-        body:
-          "This project explores the design of a medical office, with an emphasis on creating a clear, welcoming, and functional environment. The project's specific goals and design decisions can be added here.",
-      },
-      {
-        eyebrow: "02 / THE EXPERIENCE",
-        title: "Comfort in Every Detail",
-        body:
-          "A successful professional environment needs to work well for both visitors and staff. This section will describe how the layout, lighting, materials, and spatial organization support the intended experience.",
-      },
-      {
-        eyebrow: "03 / DESIGN APPROACH",
-        title: "Designed Around Real Needs",
-        body:
-          "The design narrative will explain how the project's requirements informed the planning and interior decisions, and how the finished design responds to the client's priorities.",
-      },
-    ],
-  },
-  {
-    slug: "parking",
-    title: "Parking Project",
-    category: "URBAN DESIGN",
-    location: "IRAN",
-    year: "",
-    image: "/images/parking.png",
-    description:
-      "An urban concept focused on the relationship between infrastructure, movement, and the surrounding environment.",
-    sections: [
-      {
-        eyebrow: "01 / THE PROJECT",
-        title: "More Than a Parking Space",
-        body:
-          "This project considers parking as part of the wider urban experience. The final project description will explain the site, the intended users, and the main challenges addressed by the design.",
-      },
-      {
-        eyebrow: "02 / THE EXPERIENCE",
-        title: "Clarity and Ease of Use",
-        body:
-          "Legibility, circulation, and ease of movement are important parts of a successful parking environment. This section will describe the design approach and the solutions developed for the project.",
-      },
-      {
-        eyebrow: "03 / DESIGN APPROACH",
-        title: "Responding to the Site",
-        body:
-          "The final narrative will present how site conditions, access, circulation, and the relationship with the surrounding urban fabric informed the design decisions.",
-      },
-    ],
-  },
+
 ];
 
 function ProjectsContent() {
