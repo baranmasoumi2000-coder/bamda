@@ -27,36 +27,6 @@ type Project = {
 
 const projects: Project[] = [
   {
-    slug: "yousefi",
-    title: "Yousefi Residence",
-    category: "RESIDENTIAL INTERIOR",
-    location: "SHAHRAK-E GHARB, TEHRAN",
-    year: "",
-    image: "/images/yousefi/yousefi 01.png",
-    description:
-      "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
-    sections: [
-      {
-        eyebrow: "01 / THE PROJECT",
-        title: "A Calm, Contemporary Interior",
-        body:
-          "An interior design project for a residential unit in Shahrak-e Gharb, Tehran, presented through rendered views of the main living and private spaces.",
-      },
-      {
-        eyebrow: "02 / LIVING & DINING",
-        title: "Spaces for Gathering",
-        body:
-          "The TV room and dining area bring together the main shared spaces, with dedicated views highlighting the ceiling lighting detail and the decorative console.",
-      },
-      {
-        eyebrow: "03 / PRIVATE SPACES",
-        title: "Everyday Rituals",
-        body:
-          "The presentation continues through the entrance dressing area, kitchen, and bedrooms, including a close view of the bedroom flooring.",
-      },
-    ],
-  },
-  {
     slug: "villa-rasht",
     title: "Villa Rasht",
     category: "RESIDENTIAL",
@@ -89,6 +59,36 @@ const projects: Project[] = [
         title: "Regional Character, Contemporary Living",
         body:
           "Inspired by the spatial qualities of traditional houses in northern Iran, the project explores how regional architectural character can inform contemporary living. The aim is to balance openness, comfort, privacy, and a lasting connection with nature.",
+      },
+    ],
+  },
+  {
+    slug: "yousefi",
+    title: "Yousefi Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "SHAHRAK-E GHARB, TEHRAN",
+    year: "",
+    image: "/images/yousefi/yousefi 01.png",
+    description:
+      "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
+    sections: [
+      {
+        eyebrow: "01 / THE PROJECT",
+        title: "A Calm, Contemporary Interior",
+        body:
+          "An interior design project for a residential unit in Shahrak-e Gharb, Tehran, presented through rendered views of the main living and private spaces.",
+      },
+      {
+        eyebrow: "02 / LIVING & DINING",
+        title: "Spaces for Gathering",
+        body:
+          "The TV room and dining area bring together the main shared spaces, with dedicated views highlighting the ceiling lighting detail and the decorative console.",
+      },
+      {
+        eyebrow: "03 / PRIVATE SPACES",
+        title: "Everyday Rituals",
+        body:
+          "The presentation continues through the entrance dressing area, kitchen, and bedrooms, including a close view of the bedroom flooring.",
       },
     ],
   },
