@@ -112,7 +112,7 @@ export default function VillaRasht() {
           <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-black px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
             <div className="relative min-h-0 flex-1">
               {item.type === "pdf" ? (
-                <iframe src={`${encodeURI(item.src)}#toolbar=1&navpanes=0`} title={item.en} className="h-full min-h-[300px] w-full bg-white" />
+                <iframe src={`${encodeURI(item.src)}${item.src === "/images/rasht boresh.pdf" ? "#zoom=page-fit&toolbar=0&navpanes=0" : "#toolbar=1&navpanes=0"}`} title={item.en} className="h-full min-h-[300px] w-full bg-white" />
               ) : (
                 <Image src={item.src} alt={item.en} fill sizes="100vw" className="object-contain" />
               )}
