@@ -116,6 +116,30 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    slug: "abas-khani",
+    title: "Abas Khani Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "IRAN",
+    year: "2026",
+    image: "/images/abas khani/01.png",
+    description:
+      "A contemporary residential project exploring materiality, light, and the atmosphere of everyday living.",
+    sections: [
+      {
+        eyebrow: "01 / THE PROJECT",
+        title: "Abas Khani Residence",
+        body:
+          "A residential design project presented through a series of interior visualizations.",
+      },
+      {
+        eyebrow: "02 / MATERIAL & LIGHT",
+        title: "A Considered Interior",
+        body:
+          "The project explores the relationship between materials, lighting, and the experience of the interior space.",
+      },
+    ],
+  },
 
 ];
 
@@ -305,6 +329,11 @@ function ProjectsContent() {
 
                   if (item.slug === "mohammadi") {
                     window.location.href = "/projects/mohammadi";
+                    return;
+                  }
+
+                  if (item.slug === "abas-khani") {
+                    window.location.href = "/projects/abas-khani";
                     return;
                   }
 
