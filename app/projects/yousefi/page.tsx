@@ -17,7 +17,6 @@ const gallery = [
   { src: "/images/yousefi/yousefi 12.png", en: "Kitchen — View 01", fa: "آشپزخانه — نمای ۰۱" },
   { src: "/images/yousefi/yousefi 13.png", en: "Kitchen — View 02", fa: "آشپزخانه — نمای ۰۲" },
   { src: "/images/yousefi/yousefi 14.png", en: "Kitchen — View 03", fa: "آشپزخانه — نمای ۰۳" },
-  { src: "/images/yousefi/yousefi 15.png", en: "Bedroom — View 01", fa: "اتاق خواب — نمای ۰۱" },
   { src: "/images/yousefi/yousefi 16.png", en: "Bedroom — View 02", fa: "اتاق خواب — نمای ۰۲" },
   { src: "/images/yousefi/yousefi 17.png", en: "Bedroom — View 03", fa: "اتاق خواب — نمای ۰۳" },
   { src: "/images/yousefi/yousefi 18.png", en: "Bedroom — Flooring Detail", fa: "اتاق خواب — دیتیل کف‌سازی" },
@@ -103,7 +102,7 @@ export default function YousefiProject() {
                 <p className="text-[10px] tracking-[0.18em] text-zinc-200 sm:text-xs">{item.en}</p>
                 <p dir="rtl" className="mt-1 text-xs text-zinc-500">{item.fa}</p>
               </div>
-              <span className="text-[10px] tracking-widest text-zinc-600">{String(index + 1).padStart(2, "0")} / 18</span>
+              <span className="text-[10px] tracking-widest text-zinc-600">{String(index + 1).padStart(2, "0")} / 17</span>
             </div>
           </section>
         ))}
