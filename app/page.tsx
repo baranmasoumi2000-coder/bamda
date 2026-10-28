@@ -14,21 +14,12 @@ const projects = [
   },
   {
     number: "02",
-    title: "Medatech",
-    category: "MEDICAL OFFICE",
-    location: "TEHRAN, IRAN",
-    image: "/images/medatech.png",
+    title: "Yousefi Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "SHAHRAK-E GHARB, TEHRAN",
+    image: "/images/yousefi/yousefi 01.png",
     description:
-      "طراحی فضایی حرفه‌ای با تمرکز بر نیازهای کاربران و کیفیت تجربه روزمره.",
-  },
-  {
-    number: "03",
-    title: "Parking Project",
-    category: "URBAN DESIGN",
-    location: "IRAN",
-    image: "/images/parking.png",
-    description:
-      "نگاهی به ارتباط زیرساخت، حرکت و محیط شهری در طراحی فضاهای پارکینگ.",
+      "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
   },
 ];
 
@@ -115,7 +106,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
 
                   <span className="absolute left-5 top-5 text-xs tracking-[0.2em] text-white sm:left-10 sm:top-10">
-                    {project.number} / 03
+                    {project.number} / 02
                   </span>
 
                   <span className="absolute bottom-6 left-5 text-[10px] tracking-[0.2em] text-white sm:bottom-10 sm:left-10">
