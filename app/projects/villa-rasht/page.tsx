@@ -4,17 +4,28 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = [
-  { src: "/images/rasht render 02.png", en: "Exterior View", fa: "نمای بیرونی", type: "image" },
-  { src: "/images/rasht dakheli 02.png", en: "Interior Design", fa: "طراحی داخلی", type: "image" },
-  { src: "/images/rasht render 03.png", en: "Architectural Visualization", fa: "تجسم معماری", type: "image" },
-  { src: "/images/rasht diagram 03.png", en: "Design Development", fa: "روند شکل‌گیری طرح", type: "image" },
-  { src: "/images/rasht diagram 01.png", en: "Concept Diagram", fa: "دیاگرام مفهومی", type: "image" },
+  // Exterior renders
+  { src: "/images/rasht render 02.png", en: "Exterior View 01", fa: "نمای بیرونی ۰۱", type: "image" },
+  { src: "/images/rasht render 03.png", en: "Exterior View 02", fa: "نمای بیرونی ۰۲", type: "image" },
+
+  // Interior renders
+  { src: "/images/rasht dakheli 02.png", en: "Interior Design 01", fa: "طراحی داخلی ۰۱", type: "image" },
+  { src: "/images/rasht dakheli 01.png", en: "Interior Design 02", fa: "طراحی داخلی ۰۲", type: "image" },
+
+  // Interior atmosphere
   { src: "/images/rasht dakheli 03.png", en: "Interior Atmosphere", fa: "فضای داخلی", type: "image" },
+
+  // Design process
+  { src: "/images/rasht diagram 01.png", en: "Concept Diagram", fa: "دیاگرام مفهومی", type: "image" },
+  { src: "/images/rasht diagram 03.png", en: "Design Development", fa: "روند شکل‌گیری طرح", type: "image" },
+
+  // Plans and section
   { src: "/images/rasht plan.pdf", en: "Floor Plan", fa: "پلان معماری", type: "pdf" },
-  { src: "/images/rasht deatail 01.jpg", en: "Architectural Detail 01", fa: "دیتیل معماری ۰۱", type: "image" },
-  { src: "/images/rasht dakheli 01.png", en: "Interior Design", fa: "طراحی داخلی", type: "image" },
-  { src: "/images/rasht deatail 02.jpg", en: "Architectural Detail 02", fa: "دیتیل معماری ۰۲", type: "image" },
   { src: "/images/rasht boresh.pdf", en: "Building Section", fa: "برش معماری", type: "pdf" },
+
+  // Architectural details
+  { src: "/images/rasht deatail 01.jpg", en: "Architectural Detail 01", fa: "دیتیل معماری ۰۱", type: "image" },
+  { src: "/images/rasht deatail 02.jpg", en: "Architectural Detail 02", fa: "دیتیل معماری ۰۲", type: "image" },
   { src: "/images/rasht deatail 03.jpg", en: "Architectural Detail 03", fa: "دیتیل معماری ۰۳", type: "image" },
 ];
 
