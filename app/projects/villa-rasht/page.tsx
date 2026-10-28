@@ -20,8 +20,8 @@ const gallery = [
   { src: "/images/rasht diagram 03.png", en: "Design Development", fa: "روند شکل‌گیری طرح", type: "image" },
 
   // Plans and section
-  { src: "/images/rasht plan.pdf", en: "Floor Plan", fa: "پلان معماری", type: "pdf" },
-  { src: "/images/rasht boresh.pdf", en: "Building Section", fa: "برش معماری", type: "pdf" },
+  { src: "/images/rasht plan.png", en: "Floor Plan", fa: "پلان معماری", type: "image" },
+  { src: "/images/rasht boresh.png", en: "Building Section", fa: "برش معماری", type: "image" },
 
   // Architectural details
   { src: "/images/rasht deatail 01.jpg", en: "Architectural Detail 01", fa: "دیتیل معماری ۰۱", type: "image" },
@@ -122,13 +122,8 @@ export default function VillaRasht() {
         {gallery.map((item, index) => (
           <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-black px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
             <div className="relative min-h-0 flex-1">
-              {item.type === "pdf" ? (
-                <iframe src={`${encodeURI(item.src)}${item.src === "/images/rasht boresh.pdf" ? "#zoom=page-fit&toolbar=0&navpanes=0" : "#toolbar=1&navpanes=0"}`} title={item.en} className="h-full min-h-[300px] w-full bg-white" />
-              ) : (
-                <Image src={item.src} alt={item.en} fill sizes="100vw" className="object-contain" />
-              )}
+              <Image src={item.src} alt={item.en} fill sizes="100vw" className="object-contain" />
             </div>
-            {item.type === "pdf" && <a href={encodeURI(item.src)} target="_blank" rel="noreferrer" className="absolute right-5 top-5 z-10 text-[10px] tracking-widest text-zinc-400 hover:text-white">OPEN PDF ↗</a>}
             <div className="flex items-end justify-between gap-4 pt-4">
               <div>
                 <p className="text-[10px] tracking-[0.18em] text-zinc-200 sm:text-xs">{item.en}</p>
