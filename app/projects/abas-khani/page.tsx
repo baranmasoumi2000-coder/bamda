@@ -32,7 +32,7 @@ const gallery = Array.from({ length: 9 }, (_, index) => ({
 const totalSlides = gallery.length + 2;
 const toFa = (value: number) => String(value).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
 
-export default function AbasKhaniResidence() {
+export default function AbasKhaniApartment() {
   const [activeSlide, setActiveSlide] = useState(0);
   const wheelLock = useRef(false);
   const touchStartX = useRef(0);
@@ -94,13 +94,13 @@ export default function AbasKhaniResidence() {
       >
         <section className="relative h-full w-screen flex-none">
           <div className="absolute inset-0 bg-zinc-900" />
-          <Image src={gallery[0].src} alt="Abas Khani Residence" fill priority sizes="100vw" className="object-cover" />
+          <Image src={gallery[0].src} alt="Abas Khani Apartment" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute bottom-20 left-6 right-6 sm:bottom-16 sm:left-14">
             <p className="mb-3 text-[10px] tracking-[0.3em] text-white/65">BAMDA / RESIDENTIAL PROJECT</p>
-            <h1 className="text-5xl font-extralight tracking-wide sm:text-7xl">Abas Khani Residence</h1>
-            <p className="mt-3 text-xs tracking-[0.25em] text-zinc-300">CHITGAR, TEHRAN / INTERIOR DESIGN</p>
-            <p dir="rtl" className="mt-2 text-sm text-zinc-300">اقامتگاه عباس‌خانی / چیتگر، تهران</p>
+            <h1 className="text-5xl font-extralight tracking-wide sm:text-7xl">Abas Khani Apartment</h1>
+            <p className="mt-3 text-xs tracking-[0.25em] text-zinc-300">RESIDENTIAL INTERIOR / TEHRAN</p>
+            <p dir="rtl" className="mt-2 text-left text-sm text-zinc-300">واحد مسکونی عباس‌خانی / تهران</p>
             <button type="button" onClick={next} className="mt-7 flex items-center gap-3 text-[10px] tracking-[0.2em] hover:text-[#E74727]">EXPLORE PROJECT <span className="text-xl">←</span></button>
           </div>
         </section>
@@ -110,10 +110,10 @@ export default function AbasKhaniResidence() {
             <p className="mb-6 text-[10px] tracking-[0.4em] text-[#E74727]">CONCEPT / 04</p>
             <h2 className="mb-8 text-3xl font-light tracking-wide sm:text-5xl">A Calm Interior Experience</h2>
             <p className="text-sm leading-8 text-zinc-300 sm:text-base sm:leading-9">
-              An interior design project for Abas Khani Residence in Chitgar, Tehran, shaped around spatial clarity, material selection, balanced lighting, and a calm atmosphere for everyday living.
+              A residential apartment interior design project shaped around spatial clarity, material selection, balanced lighting, and a calm atmosphere for everyday living.
             </p>
-            <p dir="rtl" className="mt-5 text-sm leading-8 text-zinc-400 sm:text-base sm:leading-9">
-              طراحی داخلی اقامتگاه عباس‌خانی در چیتگر تهران، با تمرکز بر خوانایی فضا، انتخاب متریال، نورپردازی متعادل و ایجاد فضایی آرام و هماهنگ برای زندگی روزمره.
+            <p dir="rtl" className="mt-5 text-left text-sm leading-8 text-zinc-400 sm:text-base sm:leading-9">
+              طراحی داخلی واحد مسکونی عباس‌خانی با تمرکز بر خوانایی فضا، انتخاب متریال، نورپردازی متعادل و ایجاد فضایی آرام و هماهنگ برای زندگی روزمره.
             </p>
           </div>
         </section>
@@ -126,7 +126,7 @@ export default function AbasKhaniResidence() {
             <div className="flex items-end justify-between gap-4 pt-4">
               <div>
                 <p className="text-[10px] tracking-[0.18em] text-zinc-200 sm:text-xs">{item.en}</p>
-                <p dir="rtl" className="mt-1 text-xs text-zinc-500">{item.fa}</p>
+                <p dir="rtl" className="mt-1 text-left text-xs text-zinc-500">{item.fa}</p>
               </div>
               <span className="text-[10px] tracking-widest text-zinc-600">{String(index + 1).padStart(2, "0")} / {String(gallery.length).padStart(2, "0")}</span>
             </div>
