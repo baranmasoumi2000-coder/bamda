@@ -92,6 +92,32 @@ const projects: Project[] = [
       },
     ],
   },
+,
+
+  {
+    slug: "mohammadi",
+    title: "Mohammadi Café",
+    category: "CAFÉ DESIGN",
+    location: "KORDAN, IRAN",
+    year: "2026",
+    image: "/images/mohammadi/01.png",
+    description:
+      "طراحی کافه‌ای در کردان با تمرکز بر تجربه‌ی فضا، متریال و ارتباط محیط داخلی با بستر طبیعی.",
+    sections: [
+      {
+        eyebrow: "01 / THE PROJECT",
+        title: "Mohammadi Café",
+        body:
+          "A café design project in Kordan, Iran, presented through a concise series of architectural images.",
+      },
+      {
+        eyebrow: "02 / DESIGN APPROACH",
+        title: "Space, Material, Experience",
+        body:
+          "The project explores the atmosphere of a café through its spatial composition, material choices, and relationship with its surroundings.",
+      },
+    ],
+  },
 
 ];
 
@@ -276,6 +302,11 @@ function ProjectsContent() {
 
                   if (item.slug === "villa-rasht") {
                     window.location.href = "/projects/villa-rasht";
+                    return;
+                  }
+
+                  if (item.slug === "mohammadi") {
+                    window.location.href = "/projects/mohammadi";
                     return;
                   }
 
