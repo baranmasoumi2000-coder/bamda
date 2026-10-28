@@ -27,6 +27,36 @@ type Project = {
 
 const projects: Project[] = [
   {
+    slug: "yousefi",
+    title: "Yousefi Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "SHAHRAK-E GHARB, TEHRAN",
+    year: "",
+    image: "/images/yousefi/yousefi 01.png",
+    description:
+      "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
+    sections: [
+      {
+        eyebrow: "01 / THE PROJECT",
+        title: "A Calm, Contemporary Interior",
+        body:
+          "An interior design project for a residential unit in Shahrak-e Gharb, Tehran, presented through rendered views of the main living and private spaces.",
+      },
+      {
+        eyebrow: "02 / LIVING & DINING",
+        title: "Spaces for Gathering",
+        body:
+          "The TV room and dining area bring together the main shared spaces, with dedicated views highlighting the ceiling lighting detail and the decorative console.",
+      },
+      {
+        eyebrow: "03 / PRIVATE SPACES",
+        title: "Everyday Rituals",
+        body:
+          "The presentation continues through the entrance dressing area, kitchen, and bedrooms, including a close view of the bedroom flooring.",
+      },
+    ],
+  },
+  {
     slug: "villa-rasht",
     title: "Villa Rasht",
     category: "RESIDENTIAL",
@@ -298,6 +328,11 @@ function ProjectsContent() {
               <button
                 type="button"
                 onClick={() => {
+                  if (item.slug === "yousefi") {
+                    window.location.href = "/projects/yousefi";
+                    return;
+                  }
+
                   if (item.slug === "villa-rasht") {
                     window.location.href = "/projects/villa-rasht";
                     return;
