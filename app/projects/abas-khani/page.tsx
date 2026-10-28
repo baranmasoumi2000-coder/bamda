@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = Array.from({ length: 9 }, (_, index) => ({
-  src: `/images/abas-khani/${String(index + 1).padStart(2, "0")}.png`,
+  src: `https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani/${String(index + 1).padStart(2, "0")}.png`,
   en: [
     "Exterior View",
     "Interior Design",
@@ -94,7 +94,7 @@ export default function AbasKhaniApartment() {
       >
         <section className="relative h-full w-screen flex-none">
           <div className="absolute inset-0 bg-zinc-900" />
-          <Image src={gallery[0].src} alt="Abas Khani Apartment" fill priority sizes="100vw" className="object-cover" />
+          <img src={gallery[0].src} alt="Abas Khani Apartment" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute bottom-20 left-6 right-6 sm:bottom-16 sm:left-14">
             <p className="mb-3 text-[10px] tracking-[0.3em] text-white/65">BAMDA / RESIDENTIAL PROJECT</p>
@@ -121,7 +121,7 @@ export default function AbasKhaniApartment() {
         {gallery.map((item, index) => (
           <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-black px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
             <div className="relative min-h-0 flex-1">
-              <Image src={item.src} alt={item.en} fill sizes="100vw" className="object-contain" />
+              <img src={item.src} alt={item.en} className="absolute inset-0 h-full w-full object-contain" />
             </div>
             <div className="flex items-end justify-between gap-4 pt-4">
               <div>
