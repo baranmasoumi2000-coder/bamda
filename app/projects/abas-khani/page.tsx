@@ -3,14 +3,34 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const base = "/images/abas-khani";
-const toFa = (value: number) => String(value).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
 const gallery = Array.from({ length: 9 }, (_, index) => ({
-  src: `${base}/${String(index + 1).padStart(2, "0")}.png`,
-  alt: `اقامتگاه عباس‌خانی — نمای ${toFa(index + 1)}`,
-  caption: `نمای ${toFa(index + 1)}`,
+  src: `/images/abas-khani/${String(index + 1).padStart(2, "0")}.png`,
+  en: [
+    "Exterior View",
+    "Interior Design",
+    "Living Space",
+    "Material Palette",
+    "Lighting Design",
+    "Spatial Composition",
+    "Interior Detail",
+    "Design Development",
+    "Atmosphere",
+  ][index],
+  fa: [
+    "نمای بیرونی",
+    "طراحی داخلی",
+    "فضای نشیمن",
+    "پالت متریال",
+    "طراحی نورپردازی",
+    "ترکیب‌بندی فضایی",
+    "جزئیات داخلی",
+    "روند شکل‌گیری طرح",
+    "حال‌وهوای فضا",
+  ][index],
 }));
+
 const totalSlides = gallery.length + 2;
+const toFa = (value: number) => String(value).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
 
 export default function AbasKhaniResidence() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -62,7 +82,8 @@ export default function AbasKhaniResidence() {
 
   return (
     <main
-      dir="ltr" className="fixed inset-0 overflow-hidden bg-black text-white"
+      dir="ltr"
+      className="fixed inset-0 overflow-hidden bg-black text-white"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -72,29 +93,27 @@ export default function AbasKhaniResidence() {
         style={{ direction: "ltr", width: `${totalSlides * 100}vw`, transform: `translateX(-${activeSlide * 100}vw)` }}
       >
         <section className="relative h-full w-screen flex-none">
-          <Image src={gallery[0].src} alt="اقامتگاه عباس‌خانی" fill priority sizes="100vw" className="object-cover" unoptimized />
+          <div className="absolute inset-0 bg-zinc-900" />
+          <Image src={gallery[0].src} alt="Abas Khani Residence" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/45" />
-          <div dir="rtl" className="absolute bottom-20 right-6 left-6 text-right sm:bottom-16 sm:right-14">
-            <p className="mb-3 text-xs tracking-wide text-white/70">بامدا / پروژهٔ مسکونی</p>
-            <h1 className="text-5xl font-extralight leading-tight sm:text-7xl">اقامتگاه عباس‌خانی</h1>
-            <p className="mt-3 text-sm text-zinc-300">چیتگر، تهران / طراحی داخلی</p>
-            <div className="mt-5 flex items-center gap-3 text-xs text-white/70">
-              <span className="text-2xl font-light tabular-nums">{toFa(4).padStart(2, "۰")}</span>
-              <span className="h-px w-10 bg-[#E74727]" />
-              <span>مجموعهٔ پروژه‌های بامدا</span>
-            </div>
-            <button type="button" onClick={next} className="mt-7 flex items-center gap-3 text-xs hover:text-[#E74727]">
-              مشاهدهٔ پروژه <span className="text-xl">←</span>
-            </button>
+          <div className="absolute bottom-20 left-6 right-6 sm:bottom-16 sm:left-14">
+            <p className="mb-3 text-[10px] tracking-[0.3em] text-white/65">BAMDA / RESIDENTIAL PROJECT</p>
+            <h1 className="text-5xl font-extralight tracking-wide sm:text-7xl">Abas Khani Residence</h1>
+            <p className="mt-3 text-xs tracking-[0.25em] text-zinc-300">CHITGAR, TEHRAN / INTERIOR DESIGN</p>
+            <p dir="rtl" className="mt-2 text-sm text-zinc-300">اقامتگاه عباس‌خانی / چیتگر، تهران</p>
+            <button type="button" onClick={next} className="mt-7 flex items-center gap-3 text-[10px] tracking-[0.2em] hover:text-[#E74727]">EXPLORE PROJECT <span className="text-xl">←</span></button>
           </div>
         </section>
 
         <section className="flex h-full w-screen flex-none items-center overflow-y-auto px-7 py-24 sm:px-16 lg:px-24">
-          <div dir="rtl" className="max-w-4xl text-right">
-            <p className="mb-6 text-xs tracking-wide text-[#E74727]">پروژه / ۰۴</p>
-            <h2 className="mb-8 text-3xl font-light sm:text-5xl">اقامتگاه عباس‌خانی</h2>
+          <div className="max-w-4xl">
+            <p className="mb-6 text-[10px] tracking-[0.4em] text-[#E74727]">CONCEPT / 04</p>
+            <h2 className="mb-8 text-3xl font-light tracking-wide sm:text-5xl">A Calm Interior Experience</h2>
             <p className="text-sm leading-8 text-zinc-300 sm:text-base sm:leading-9">
-              طراحی داخلی فضای مسکونی با تمرکز بر کیفیت فضایی، انتخاب متریال، نورپردازی و ایجاد فضایی آرام و هماهنگ برای زندگی روزمره.
+              An interior design project for Abas Khani Residence in Chitgar, Tehran, shaped around spatial clarity, material selection, balanced lighting, and a calm atmosphere for everyday living.
+            </p>
+            <p dir="rtl" className="mt-5 text-sm leading-8 text-zinc-400 sm:text-base sm:leading-9">
+              طراحی داخلی اقامتگاه عباس‌خانی در چیتگر تهران، با تمرکز بر خوانایی فضا، انتخاب متریال، نورپردازی متعادل و ایجاد فضایی آرام و هماهنگ برای زندگی روزمره.
             </p>
           </div>
         </section>
@@ -102,30 +121,33 @@ export default function AbasKhaniResidence() {
         {gallery.map((item, index) => (
           <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-black px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
             <div className="relative min-h-0 flex-1">
-              <Image src={item.src} alt={item.alt} fill sizes="100vw" className="object-contain" unoptimized />
+              <Image src={item.src} alt={item.en} fill sizes="100vw" className="object-contain" />
             </div>
             <div className="flex items-end justify-between gap-4 pt-4">
-              <p className="text-xs text-zinc-300">{item.caption}</p>
-              <span className="text-xs tabular-nums tracking-widest text-zinc-500">{toFa(index + 1).padStart(2, "۰")} / {toFa(gallery.length).padStart(2, "۰")}</span>
+              <div>
+                <p className="text-[10px] tracking-[0.18em] text-zinc-200 sm:text-xs">{item.en}</p>
+                <p dir="rtl" className="mt-1 text-xs text-zinc-500">{item.fa}</p>
+              </div>
+              <span className="text-[10px] tracking-widest text-zinc-600">{String(index + 1).padStart(2, "0")} / {String(gallery.length).padStart(2, "0")}</span>
             </div>
           </section>
         ))}
       </div>
 
       <header className="pointer-events-none absolute left-0 right-0 top-0 z-20 flex items-center justify-between gap-4 px-5 py-5 sm:px-10">
-        <a href="/projects" className="pointer-events-auto text-xs text-white/80 transition-colors hover:text-[#E74727]">← همهٔ پروژه‌ها</a>
-        <span className="text-xs text-white/70">بامدا / اقامتگاه عباس‌خانی</span>
+        <a href="/projects" className="pointer-events-auto text-[10px] tracking-[0.18em] text-white/80 transition-colors hover:text-[#E74727]">← ALL PROJECTS / همهٔ پروژه‌ها</a>
+        <span className="text-[9px] tracking-[0.18em] text-white/65 sm:text-[10px]">BAMDA / ABAS KHANI RESIDENCE</span>
         <span className="text-xs tabular-nums tracking-widest">{toFa(activeSlide + 1).padStart(2, "۰")} / {toFa(totalSlides).padStart(2, "۰")}</span>
       </header>
 
       <footer className="absolute bottom-0 left-0 right-0 z-20 flex items-center justify-between gap-3 border-t border-white/10 bg-black/80 px-4 py-4 backdrop-blur-sm sm:px-10">
-        <button type="button" onClick={previous} disabled={activeSlide === 0} className="shrink-0 text-xs transition-colors hover:text-[#E74727] disabled:opacity-25">← قبلی</button>
+        <button type="button" onClick={previous} disabled={activeSlide === 0} className="shrink-0 text-[9px] tracking-widest transition-colors hover:text-[#E74727] disabled:opacity-25 sm:text-xs">← PREVIOUS / قبلی</button>
         <div className="flex min-w-0 items-center justify-center gap-1.5 sm:gap-2">
           {Array.from({ length: totalSlides }).map((_, index) => (
-            <button key={index} type="button" onClick={() => goTo(index)} aria-label={`رفتن به اسلاید ${toFa(index + 1)}`} aria-current={activeSlide === index ? "step" : undefined} className={`h-1 transition-all duration-300 ${activeSlide === index ? "w-5 bg-[#E74727] sm:w-7" : "w-1.5 bg-white/30 sm:w-2"}`} />
+            <button key={index} type="button" onClick={() => goTo(index)} aria-label={`Go to slide ${index + 1}`} aria-current={activeSlide === index ? "step" : undefined} className={`h-1 transition-all duration-300 ${activeSlide === index ? "w-5 bg-[#E74727] sm:w-7" : "w-1.5 bg-white/30 sm:w-2"}`} />
           ))}
         </div>
-        <button type="button" onClick={next} disabled={activeSlide === totalSlides - 1} className="shrink-0 text-xs transition-colors hover:text-[#E74727] disabled:opacity-25">بعدی →</button>
+        <button type="button" onClick={next} disabled={activeSlide === totalSlides - 1} className="shrink-0 text-[9px] tracking-widest transition-colors hover:text-[#E74727] disabled:opacity-25 sm:text-xs">NEXT / بعدی →</button>
       </footer>
     </main>
   );
