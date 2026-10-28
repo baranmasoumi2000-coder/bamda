@@ -6,7 +6,7 @@ const base = "https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani";
 const gallery = Array.from({ length: 9 }, (_, index) => ({
   src: `${base}/${String(index + 1).padStart(2, "0")}.png`,
   en: `Abas Khani Residence — View ${String(index + 1).padStart(2, "0")}`,
-  fa: `اقامتگاه عباس‌خانی — نمای ${String(index + 1).toLocaleString("fa-IR", { minimumIntegerDigits: 2 })}`,
+  fa: `اقامتگاه عباس‌خانی — نمای ${String(index + 1).padStart(2, "0")}`,
 }));
 const totalSlides = gallery.length + 2;
 
