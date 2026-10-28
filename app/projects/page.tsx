@@ -296,7 +296,7 @@ function ProjectsContent() {
 
                   <div className="absolute bottom-6 left-5 flex items-center gap-3 text-white sm:bottom-10 sm:left-10">
                     <span className="text-xs tracking-[0.2em]">
-                      {String(index + 1).padStart(2, "0")}
+                      {item.slug === "yousefi" ? "01" : String(index + 1).padStart(2, "0")}
                     </span>
 
                     <span className="h-px w-8 bg-white/80" />
