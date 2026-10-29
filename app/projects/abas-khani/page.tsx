@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = Array.from({ length: 9 }, (_, index) => ({
-  src: `https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani/${String(index + 1).padStart(2, "0")}.png`,
+  src: `/images/abas-khani/${String(index + 1).padStart(2, "0")}.png`,
   en: [
     "Exterior View",
     "Interior Design",
