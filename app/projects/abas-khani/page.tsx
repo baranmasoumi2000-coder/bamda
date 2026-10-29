@@ -92,7 +92,7 @@ export default function AbasKhaniApartment() {
       >
         <section className="relative h-full w-screen flex-none">
           <div className="absolute inset-0 bg-zinc-900" />
-          <img src={gallery[0].src} alt="Abas Khani Apartment" className="absolute inset-0 h-full w-full object-cover" />
+          <img src="/images/abas-khani/01.png" alt="Abas Khani Apartment" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute bottom-20 left-6 right-6 sm:bottom-16 sm:left-14">
             <p className="mb-3 text-[10px] tracking-[0.3em] text-white/65">BAMDA / RESIDENTIAL PROJECT</p>
