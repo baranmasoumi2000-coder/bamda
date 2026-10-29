@@ -2,8 +2,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = [
-  ...Array.from({ length: 8 }, (_, i) => ({ src: `/images/ahmadi/${String(i + 2).padStart(2, "0")}.png`, en: "Bedroom", fa: "اتاق خواب" })),
-  ...Array.from({ length: 10 }, (_, i) => ({ src: `/images/ahmadi/${String(i + 10).padStart(2, "0")}.png`, en: i < 5 ? "Bathroom" : "Washroom", fa: i < 5 ? "حمام" : "سرویس بهداشتی" })),
+  { src: "/images/ahmadi/08.png", en: "Bedroom", fa: "اتاق خواب" },
+  { src: "/images/ahmadi/10.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/11.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/12.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/14.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/15.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/16.png", en: "Bathroom", fa: "حمام" },
+  { src: "/images/ahmadi/18.png", en: "Washroom", fa: "سرویس بهداشتی" },
+  { src: "/images/ahmadi/19.png", en: "Washroom", fa: "سرویس بهداشتی" },
 ];
 const totalSlides = gallery.length + 2;
 const toFa = (v: number) => String(v).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[Number(d)]);
@@ -43,7 +50,7 @@ export default function AhmadiResidence() {
   return <main dir="ltr" className="fixed inset-0 overflow-hidden bg-black text-white" onWheel={wheel} onTouchStart={touchStart} onTouchEnd={touchEnd}>
     <div className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" style={{ direction: "ltr", width: `${totalSlides * 100}vw`, transform: `translateX(-${active * 100}vw)` }}>
       <section className="relative h-full w-screen flex-none">
-        <div className="absolute inset-0 bg-zinc-900" /><img src="/images/ahmadi/01.png" alt="Ahmadi Residence" className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-zinc-900" /><img src="/images/ahmadi/07.png" alt="Ahmadi Residence" className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-black/45" />
         <div className="absolute bottom-20 left-6 right-6 sm:bottom-16 sm:left-14"><p className="mb-3 text-[10px] tracking-[0.3em] text-white/65">BAMDA / RESIDENTIAL PROJECT</p><h1 className="text-4xl font-extralight tracking-wide sm:text-7xl">Ahmadi Residence</h1><p className="mt-3 text-xs tracking-[0.25em] text-zinc-300">RESIDENTIAL INTERIOR / HOMA TOWN</p><p dir="rtl" className="mt-2 text-left text-sm text-zinc-300">سرویس، حمام و اتاق خواب خانم احمدی / شهرک هما</p><button type="button" onClick={next} className="mt-7 flex items-center gap-3 text-[10px] tracking-[0.2em] hover:text-[#E74727]">EXPLORE PROJECT <span className="text-xl">←</span></button></div>
       </section>
       <section className="flex h-full w-screen flex-none items-center overflow-y-auto px-7 py-24 sm:px-16 lg:px-24"><div className="max-w-4xl"><p className="mb-6 text-[10px] tracking-[0.4em] text-[#E74727]">CONCEPT / 02</p><h2 className="mb-8 text-3xl font-light tracking-wide sm:text-5xl">Private Spaces, Carefully Considered</h2><p className="text-sm leading-8 text-zinc-300 sm:text-base sm:leading-9">A residential interior project in Homa Town, bringing the bedroom, bathroom, and washroom together through a considered approach to materials, lighting, and everyday comfort.</p><p dir="rtl" className="mt-5 text-left text-sm leading-8 text-zinc-400 sm:text-base sm:leading-9">پروژه طراحی داخلی فضاهای خصوصی یک واحد مسکونی در شهرک هما؛ شامل اتاق خواب، حمام و سرویس بهداشتی با تمرکز بر هماهنگی متریال، نورپردازی و آسایش روزمره.</p></div></section>
