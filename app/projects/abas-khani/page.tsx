@@ -3,29 +3,24 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const gallery = Array.from({ length: 8 }, (_, index) => ({
-  src: `/images/abas-khani/${String(index + 2).padStart(2, "0")}.png`,
-  en: [
-    "TV Room",
-    "Kitchen",
-    "TV Room",
-    "Living Room",
-    "Living Room",
-    "Bedroom",
-    "Bedroom",
-    "Bedroom",
-  ][index],
-  fa: [
-    "تی‌وی روم",
-    "آشپزخانه",
-    "تی‌وی روم",
-    "پذیرایی",
-    "پذیرایی",
-    "اتاق خواب",
-    "اتاق خواب",
-    "اتاق خواب",
-  ][index],
-}));
+const gallery = Array.from({ length: 8 }, (_, index) => {
+  const imageOrder = [2, 4, 3, 5, 6, 7, 8, 9];
+  const labels = [
+    ["TV Room", "تی‌وی روم"],
+    ["Kitchen", "آشپزخانه"],
+    ["TV Room", "تی‌وی روم"],
+    ["Living Room", "پذیرایی"],
+    ["Living Room", "پذیرایی"],
+    ["Bedroom", "اتاق خواب"],
+    ["Bedroom", "اتاق خواب"],
+    ["Bedroom", "اتاق خواب"],
+  ];
+  return {
+    src: `/images/abas-khani/${String(imageOrder[index]).padStart(2, "0")}.png`,
+    en: labels[index][0],
+    fa: labels[index][1],
+  };
+});
 
 const totalSlides = gallery.length + 2;
 const toFa = (value: number) => String(value).replace(/\d/g, (digit) => "۰۱۲۳۴۵۶۷۸۹"[Number(digit)]);
