@@ -35,9 +35,27 @@ const projects = [
     title: "Abas Khani Residence",
     category: "RESIDENTIAL INTERIOR",
     location: "IRAN",
-    image: "https://bamda-dkmer4wk8-bamda.vercel.app/images/abas%20khani/01.png",
+    image: "/images/abas-khani/01.png",
     description:
       "طراحی داخلی معاصر با تأکید بر متریال، نور و کیفیت تجربه‌ی فضای مسکونی.",
+  },
+  {
+    number: "05",
+    title: "Naderlo Bedroom",
+    category: "RESIDENTIAL INTERIOR",
+    location: "SHAHRAK-E GHARB, TEHRAN",
+    image: "/images/naderlo/01.png",
+    description:
+      "طراحی اتاق خوابی معاصر با تأکید بر انتخاب متریال، نورپردازی لایه‌ای و فضایی آرام.",
+  },
+  {
+    number: "06",
+    title: "Ahmadi Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "HOMA TOWN",
+    image: "/images/ahmadi/01.png",
+    description:
+      "طراحی داخلی اتاق خواب، حمام و سرویس با تمرکز بر متریال و نورپردازی.",
   },
 ];
 
@@ -110,7 +128,7 @@ export default function Home() {
           {projects.map((project) => (
             <article key={project.number}>
               <Link
-                href={project.number === "03" ? "/projects/mohammadi" : project.number === "04" ? "/projects/abas-khani" : "/projects"}
+                href={project.number === "02" ? "/projects/yousefi" : project.number === "03" ? "/projects/mohammadi" : project.number === "04" ? "/projects/abas-khani" : project.number === "05" ? "/projects/naderlo" : project.number === "06" ? "/projects/ahmadi" : "/projects"}
                 className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E74727]"
                 aria-label={`Explore ${project.title}`}
               >
@@ -124,7 +142,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
 
                   <span className="absolute left-5 top-5 text-xs tracking-[0.2em] text-white sm:left-10 sm:top-10">
-                    {project.number} / 04
+                    {project.number} / 06
                   </span>
 
                   <span className="absolute bottom-6 left-5 text-[10px] tracking-[0.2em] text-white sm:bottom-10 sm:left-10">
