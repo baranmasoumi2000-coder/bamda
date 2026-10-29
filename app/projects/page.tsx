@@ -141,19 +141,6 @@ const projects: Project[] = [
     ],
   },
   {
-    slug: "ahmadi",
-    title: "Ahmadi Residence",
-    category: "RESIDENTIAL INTERIOR",
-    location: "HOMA TOWN",
-    year: "2026",
-    image: "/images/ahmadi/01.png",
-    description: "A residential interior project bringing the bedroom, bathroom, and washroom together through considered materials and lighting.",
-    sections: [
-      { eyebrow: "01 / THE PROJECT", title: "Private Spaces, Carefully Considered", body: "A residential interior project in Homa Town, focused on the bedroom, bathroom, and washroom." },
-      { eyebrow: "02 / MATERIAL & LIGHT", title: "Everyday Comfort", body: "A sequence of views exploring the materials, lighting, and atmosphere of these private spaces." },
-    ],
-  },
-  {
     slug: "naderlo",
     title: "Naderlo Bedroom",
     category: "RESIDENTIAL INTERIOR",
@@ -166,7 +153,20 @@ const projects: Project[] = [
       { eyebrow: "02 / MATERIAL & LIGHT", title: "A Calm Interior Atmosphere", body: "A sequence of views highlighting the bedroom's spatial composition, material choices, and lighting atmosphere." },
     ],
   },
-];
+
+  {
+    slug: "ahmadi",
+    title: "Ahmadi Residence",
+    category: "RESIDENTIAL INTERIOR",
+    location: "HOMA TOWN",
+    year: "2026",
+    image: "/images/ahmadi/07.png",
+    description: "A residential interior project bringing the bedroom, bathroom, and washroom together through considered materials and lighting.",
+    sections: [
+      { eyebrow: "01 / THE PROJECT", title: "Private Spaces, Carefully Considered", body: "A residential interior project in Homa Town, focused on the bedroom, bathroom, and washroom." },
+      { eyebrow: "02 / MATERIAL & LIGHT", title: "Everyday Comfort", body: "A sequence of views exploring the materials, lighting, and atmosphere of these private spaces." },
+    ],
+  },];
 
 function ProjectsContent() {
   const searchParams = useSearchParams();
