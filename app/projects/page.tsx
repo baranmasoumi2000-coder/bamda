@@ -140,7 +140,20 @@ const projects: Project[] = [
       },
     ],
   },
-
+,
+  {
+    slug: "naderlo",
+    title: "Naderlo Bedroom",
+    category: "RESIDENTIAL INTERIOR",
+    location: "SHAHRAK-E GHARB, TEHRAN",
+    year: "2026",
+    image: "/images/naderlo/01.png",
+    description: "A contemporary bedroom interior shaped by considered materials, layered lighting, and a calm residential atmosphere.",
+    sections: [
+      { eyebrow: "01 / THE PROJECT", title: "A Considered Private Space", body: "A residential bedroom interior project in Shahrak-e Gharb, Tehran, presented through architectural visualizations." },
+      { eyebrow: "02 / MATERIAL & LIGHT", title: "A Calm Interior Atmosphere", body: "A sequence of views highlighting the bedroom's spatial composition, material choices, and lighting atmosphere." },
+    ],
+  },
 ];
 
 function ProjectsContent() {
@@ -334,6 +347,11 @@ function ProjectsContent() {
 
                   if (item.slug === "abas-khani") {
                     window.location.href = "/projects/abas-khani";
+                    return;
+                  }
+
+                  if (item.slug === "naderlo") {
+                    window.location.href = "/projects/naderlo";
                     return;
                   }
 
