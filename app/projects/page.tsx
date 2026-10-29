@@ -18,6 +18,7 @@ type Project = {
   year: string;
   image: string;
   description: string;
+  persianDescription: string;
   sections: {
     eyebrow: string;
     title: string;
@@ -35,6 +36,7 @@ const projects: Project[] = [
     image: "/images/villa-rasht.png",
     description:
       "A home shaped by the landscape, regional character, and the experience of everyday living.",
+    persianDescription: "بازطراحی یک سازه موجود با تأکید بر پیوند میان معماری، طبیعت و اقلیم شمال ایران.",
     sections: [
       {
         eyebrow: "01 / THE PROJECT",
@@ -71,6 +73,7 @@ const projects: Project[] = [
     image: "/images/yousefi/yousefi 01.png",
     description:
       "A contemporary residential interior shaped around calm materials, warm lighting, and everyday comfort.",
+    persianDescription: "طراحی داخلی معاصر یک واحد مسکونی با تأکید بر مصالح آرام، نورپردازی گرم و آسایش روزمره.",
     sections: [
       {
         eyebrow: "01 / THE PROJECT",
@@ -101,6 +104,7 @@ const projects: Project[] = [
     image: "/images/mohammadi/01.png",
     description:
       "طراحی کافه‌ای در کردان با تمرکز بر تجربه‌ی فضا، متریال و ارتباط محیط داخلی با بستر طبیعی.",
+    persianDescription: "طراحی کافه‌ای در کردان با تمرکز بر تجربه‌ی فضا و حال‌وهوای محیط.",
     sections: [
       {
         eyebrow: "01 / THE PROJECT",
@@ -125,6 +129,7 @@ const projects: Project[] = [
     image: "/images/abas-khani/01.png",
     description:
       "A contemporary residential project exploring materiality, light, and the atmosphere of everyday living.",
+    persianDescription: "طراحی داخلی معاصر با تأکید بر متریال، نور و کیفیت تجربه‌ی فضای مسکونی.",
     sections: [
       {
         eyebrow: "01 / THE PROJECT",
@@ -148,6 +153,7 @@ const projects: Project[] = [
     year: "2026",
     image: "/images/naderlo/01.png",
     description: "A contemporary bedroom interior shaped by considered materials, layered lighting, and a calm residential atmosphere.",
+    persianDescription: "طراحی اتاق خوابی معاصر با تأکید بر انتخاب متریال، نورپردازی لایه‌ای و فضایی آرام.",
     sections: [
       { eyebrow: "01 / THE PROJECT", title: "A Considered Private Space", body: "A residential bedroom interior project in Shahrak-e Gharb, Tehran, presented through architectural visualizations." },
       { eyebrow: "02 / MATERIAL & LIGHT", title: "A Calm Interior Atmosphere", body: "A sequence of views highlighting the bedroom's spatial composition, material choices, and lighting atmosphere." },
@@ -162,6 +168,7 @@ const projects: Project[] = [
     year: "2026",
     image: "/images/ahmadi/01.png",
     description: "A residential interior project bringing the bedroom, bathroom, and washroom together through considered materials and lighting.",
+    persianDescription: "طراحی داخلی اتاق خواب، حمام و سرویس با تمرکز بر متریال و نورپردازی.",
     sections: [
       { eyebrow: "01 / THE PROJECT", title: "Private Spaces, Carefully Considered", body: "A residential interior project in Homa Town, focused on the bedroom, bathroom, and washroom." },
       { eyebrow: "02 / MATERIAL & LIGHT", title: "Everyday Comfort", body: "A sequence of views exploring the materials, lighting, and atmosphere of these private spaces." },
@@ -413,6 +420,10 @@ function ProjectsContent() {
                     <p className="mt-3 text-[10px] tracking-[0.12em] text-[#77736D] sm:text-xs sm:tracking-[0.16em]">
                       {item.category} / {item.location}
                       {item.year ? ` / ${item.year}` : ""}
+                    </p>
+
+                    <p dir="rtl" lang="fa" className="mt-3 max-w-2xl text-right text-sm leading-7 text-[#55534E] sm:text-base">
+                      {item.persianDescription}
                     </p>
                   </div>
 
