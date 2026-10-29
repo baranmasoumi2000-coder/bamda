@@ -3,29 +3,27 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const gallery = Array.from({ length: 9 }, (_, index) => ({
-  src: `/images/abas-khani/${String(index + 1).padStart(2, "0")}.png`,
+const gallery = Array.from({ length: 8 }, (_, index) => ({
+  src: `/images/abas-khani/${String(index + 2).padStart(2, "0")}.png`,
   en: [
-    "Exterior View",
-    "Interior Design",
-    "Living Space",
-    "Material Palette",
-    "Lighting Design",
-    "Spatial Composition",
-    "Interior Detail",
-    "Design Development",
-    "Atmosphere",
+    "TV Room",
+    "Kitchen",
+    "TV Room",
+    "Living Room",
+    "Living Room",
+    "Bedroom",
+    "Bedroom",
+    "Bedroom",
   ][index],
   fa: [
-    "نمای بیرونی",
-    "طراحی داخلی",
-    "فضای نشیمن",
-    "پالت متریال",
-    "طراحی نورپردازی",
-    "ترکیب‌بندی فضایی",
-    "جزئیات داخلی",
-    "روند شکل‌گیری طرح",
-    "حال‌وهوای فضا",
+    "تی‌وی روم",
+    "آشپزخانه",
+    "تی‌وی روم",
+    "پذیرایی",
+    "پذیرایی",
+    "اتاق خواب",
+    "اتاق خواب",
+    "اتاق خواب",
   ][index],
 }));
 
