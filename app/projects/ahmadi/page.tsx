@@ -2,15 +2,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const gallery = [
-  { src: "/images/ahmadi/08.png", en: "Bedroom", fa: "اتاق خواب" },
-  { src: "/images/ahmadi/10.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/11.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/12.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/14.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/15.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/16.png", en: "Bathroom", fa: "حمام" },
-  { src: "/images/ahmadi/18.png", en: "Washroom", fa: "سرویس بهداشتی" },
-  { src: "/images/ahmadi/19.png", en: "Washroom", fa: "سرویس بهداشتی" },
+  ...Array.from({ length: 18 }, (_, i) => i + 2)
+    .filter(n => ![3, 7, 17].includes(n))
+    .map(n => ({
+      src: `/images/ahmadi/${String(n).padStart(2, "0")}.png`,
+      en: n <= 7 ? "Bedroom" : n <= 13 ? "Bathroom" : "Washroom",
+      fa: n <= 7 ? "اتاق خواب" : n <= 13 ? "حمام" : "سرویس بهداشتی",
+    })),
 ];
 const totalSlides = gallery.length + 2;
 const toFa = (v: number) => String(v).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[Number(d)]);
