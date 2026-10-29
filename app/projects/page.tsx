@@ -140,7 +140,6 @@ const projects: Project[] = [
       },
     ],
   },
-,
   {
     slug: "naderlo",
     title: "Naderlo Bedroom",
