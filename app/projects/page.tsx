@@ -173,7 +173,22 @@ const projects: Project[] = [
       { eyebrow: "01 / THE PROJECT", title: "Private Spaces, Carefully Considered", body: "A residential interior project in Homa Town, focused on the bedroom, bathroom, and washroom." },
       { eyebrow: "02 / MATERIAL & LIGHT", title: "Everyday Comfort", body: "A sequence of views exploring the materials, lighting, and atmosphere of these private spaces." },
     ],
-  },];
+  },
+  {
+    slug: "ebrahim-jondoni",
+    title: "Ebrahim Jondoni Bedroom",
+    category: "RESIDENTIAL INTERIOR",
+    location: "IRAN",
+    year: "2026",
+    image: "/images/ebrahim-jondoni/01.png",
+    description: "A contemporary bedroom interior shaped through a considered combination of materials, lighting, and a calm spatial atmosphere.",
+    persianDescription: "طراحی اتاق خوابی معاصر با تمرکز بر ترکیب متریال، نورپردازی و خلق فضایی آرام و منسجم.",
+    sections: [
+      { eyebrow: "01 / THE PROJECT", title: "A Calm, Contemporary Bedroom", body: "An interior design project focused on a single bedroom, presented through a sequence of architectural visualizations." },
+      { eyebrow: "02 / MATERIAL & LIGHT", title: "A Considered Private Space", body: "The project explores the relationship between material selection, layered lighting, and the atmosphere of a restful private interior." },
+    ],
+  },
+];
 
 function ProjectsContent() {
   const searchParams = useSearchParams();
@@ -376,6 +391,11 @@ function ProjectsContent() {
 
                   if (item.slug === "ahmadi") {
                     window.location.href = "/projects/ahmadi";
+                    return;
+                  }
+
+                  if (item.slug === "ebrahim-jondoni") {
+                    window.location.href = "/projects/ebrahim-jondoni";
                     return;
                   }
 
