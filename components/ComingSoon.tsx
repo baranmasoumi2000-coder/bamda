@@ -19,6 +19,7 @@ export default function ComingSoon({
     <main className="relative flex min-h-screen flex-col overflow-hidden bg-[#E7E3DA] text-[#292B29]">
       <Header />
       <section className="relative flex flex-1 items-center justify-center px-6 pb-16 pt-28 text-center">
+        <a href="/" className="absolute left-6 top-28 z-20 inline-flex items-center gap-2 text-[10px] tracking-[0.2em] text-[#77736D] transition-colors hover:text-[#E74727] sm:left-10"><span className="text-lg">←</span> BACK</a>
         <div className="pointer-events-none absolute inset-0 opacity-[0.16]">
           <div className="absolute left-1/2 top-1/2 h-[min(72vw,620px)] w-[min(72vw,620px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#292B29]" />
           <div className="absolute left-1/2 top-1/2 h-[min(52vw,440px)] w-[min(52vw,440px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#292B29]" />
