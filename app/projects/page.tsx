@@ -404,7 +404,7 @@ function ProjectsContent() {
                 className="group block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E74727]"
                 aria-label={`Open ${item.title} project`}
               >
-                <div className="relative h-[62svh] min-h-[360px] max-h-[850px] overflow-hidden bg-[#D5D0C6] sm:h-[72vh] lg:h-[82vh]">
+                <div className="relative h-[62svh] min-h-[360px] max-h-[850px] overflow-hidden bg-[#E7E3DA] sm:h-[72vh] lg:h-[82vh]">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -412,14 +412,14 @@ function ProjectsContent() {
                     className="h-full w-full object-contain sm:object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/10 transition-opacity duration-500 group-hover:from-black/55" />
+                  <div className="absolute inset-0 hidden bg-gradient-to-t from-black/45 via-transparent to-black/10 transition-opacity duration-500 group-hover:from-black/55 sm:block" />
 
-                  <div className="absolute bottom-6 left-5 flex items-center gap-3 text-white sm:bottom-10 sm:left-10">
+                  <div className="absolute bottom-6 left-5 flex items-center gap-3 text-[#292B29] sm:bottom-10 sm:left-10 sm:text-white">
                     <span className="text-xs tracking-[0.2em]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <span className="h-px w-8 bg-white/80" />
+                    <span className="h-px w-8 bg-[#292B29]/70 sm:bg-white/80" />
 
                     <span className="text-[10px] tracking-[0.2em]">
                       DISCOVER PROJECT
