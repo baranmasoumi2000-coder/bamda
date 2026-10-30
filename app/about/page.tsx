@@ -55,6 +55,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-zinc-950 text-zinc-100">
       <div className="mx-auto max-w-7xl px-5 pb-24 pt-16 sm:px-8 sm:pt-24 lg:px-12">
+        <a href="/" className="mb-8 inline-flex items-center gap-2 text-[10px] tracking-[0.2em] text-zinc-400 transition-colors hover:text-[#E74727]"><span className="text-lg">←</span> BACK</a>
         <header className="border-b border-white/15 pb-10 sm:pb-14">
           <p className="text-[10px] tracking-[0.35em] text-[#E45736] sm:text-xs">
             BAMDA / STUDIO
