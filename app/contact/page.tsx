@@ -74,6 +74,9 @@ export default function ContactPage() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-950 px-6 py-20 text-white">
       <section className="w-full max-w-5xl">
+        <a href="/" className="mb-8 inline-flex items-center gap-2 text-[10px] tracking-[0.2em] text-zinc-400 transition-colors hover:text-[#E74727]">
+          <span className="text-lg">←</span> BACK
+        </a>
         <div className="mb-14 md:mb-16">
           <p className="mb-5 text-[10px] uppercase tracking-[0.45em] text-zinc-500">
             BAMDA Architecture Studio
