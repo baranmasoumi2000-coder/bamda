@@ -157,7 +157,7 @@ export default function Home() {
                     DISCOVER PROJECT ↙
                   </span>
 
-                  <span className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#292B29]/50 text-xl text-[#292B29] transition-colors group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:bottom-10 sm:right-10 sm:h-14 sm:w-14 sm:border-white/70 sm:text-white">
+                  <span className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#E74727]/70 text-xl text-[#E74727] transition-colors group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:bottom-10 sm:right-10 sm:h-14 sm:w-14 sm:border-white/70 sm:text-white">
                     ↙
                   </span>
                 </div>
