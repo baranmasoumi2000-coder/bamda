@@ -140,7 +140,7 @@ export default function Home() {
                 className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E74727]"
                 aria-label={`Explore ${project.title}`}
               >
-                <div className="relative h-[65svh] min-h-[380px] max-h-[900px] overflow-hidden bg-[#D5D0C6] sm:h-[78svh] lg:h-[85svh]">
+                <div className="relative h-[65svh] min-h-[380px] max-h-[900px] overflow-hidden bg-[#E7E3DA] sm:h-[78svh] lg:h-[85svh]">
                   <img
                     src={project.image}
                     alt={project.title}
