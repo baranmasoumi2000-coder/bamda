@@ -77,7 +77,7 @@ export default function EbrahimJondoniBedroom() {
         </section>
 
         {gallery.map((item, i) => (
-          <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-[#E7E3DA] px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
+          <section key={item.src} className="relative flex h-full w-screen flex-none flex-col bg-[#E7E3DA] max-[390px]:bg-[#D2C9B8] px-4 pb-20 pt-16 sm:px-10 sm:pt-14">
             <div className="relative min-h-0 flex-1"><img src={item.src} alt={item.en + " " + (i + 1)} className="absolute inset-0 h-full w-full object-contain" /></div>
             <div className="flex items-end justify-between gap-4 pt-4">
               <div><p className="text-[10px] tracking-[0.18em] text-zinc-200 sm:text-xs">{item.en}</p><p dir="rtl" className="mt-1 text-left text-xs text-zinc-500">{item.fa}</p></div>
