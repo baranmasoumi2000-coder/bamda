@@ -147,17 +147,17 @@ export default function Home() {
                     className="h-full w-full object-contain sm:object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
+                  <div className="absolute inset-0 hidden bg-gradient-to-t from-black/55 via-transparent to-black/10 sm:block" />
 
-                  <span className="absolute left-5 top-5 text-xs tracking-[0.2em] text-white sm:left-10 sm:top-10">
+                  <span className="absolute left-5 top-5 text-xs tracking-[0.2em] text-[#292B29] sm:left-10 sm:top-10 sm:text-white">
                     {project.number} / 07
                   </span>
 
-                  <span className="absolute bottom-6 left-5 text-[10px] tracking-[0.2em] text-white sm:bottom-10 sm:left-10">
+                  <span className="absolute bottom-6 left-5 text-[10px] tracking-[0.2em] text-[#292B29] sm:bottom-10 sm:left-10 sm:text-white">
                     DISCOVER PROJECT ↙
                   </span>
 
-                  <span className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/70 text-xl text-white transition-colors group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:bottom-10 sm:right-10 sm:h-14 sm:w-14">
+                  <span className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#292B29]/50 text-xl text-[#292B29] transition-colors group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:bottom-10 sm:right-10 sm:h-14 sm:w-14 sm:border-white/70 sm:text-white">
                     ↙
                   </span>
                 </div>
