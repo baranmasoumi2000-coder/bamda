@@ -342,6 +342,7 @@ function ProjectsContent() {
   return (
     <main className="min-h-screen bg-[#E7E3DA] text-[#292B29]">
       <section className="px-4 pb-20 pt-28 sm:px-8 sm:pt-32 lg:px-12">
+        <a href="/" className="mb-8 inline-flex items-center gap-2 text-[10px] tracking-[0.2em] text-[#77736D] transition-colors hover:text-[#E74727]"><span className="text-lg">←</span> BACK</a>
         <div className="mb-12 flex items-end justify-between gap-6 border-b border-[#292B29]/20 pb-6 sm:mb-16">
           <div>
             <p className="mb-3 text-[10px] tracking-[0.35em] text-[#E74727]">
@@ -426,8 +427,8 @@ function ProjectsContent() {
                     </span>
                   </div>
 
-                  <span className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-white/70 text-xl text-white transition-all duration-300 group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:right-10 sm:top-10">
-                    ↙
+                  <span className="absolute right-6 top-6 flex h-12 w-12 items-center justify-center rounded-full border border-[#292B29]/50 bg-transparent text-xl text-[#292B29] transition-all duration-300 group-hover:border-[#E74727] group-hover:bg-[#E74727] sm:right-10 sm:top-10 sm:border-white/70 sm:text-white">
+                    ↙︎
                   </span>
                 </div>
 
