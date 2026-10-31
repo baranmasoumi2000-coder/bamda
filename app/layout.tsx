@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "BAMDA Architecture Studio — Contemporary Architecture, Interior Design and Competitions.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo/monogram.png",
   },
 };
 
